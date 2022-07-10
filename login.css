@@ -1,0 +1,21 @@
+body{
+    background-image: url("istockphoto-694189032-170667a\ \(1\).webp");
+    image-resolution: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 10% 25% 10% 25%;
+}
+
+fieldset{
+    background-image: url("images.webp") ;
+    color:cyan;
+}
+
+td{
+    width: 25%;
+    align-items: auto;
+}
+
+input , iframe{
+    border: 2px solid brown;
+}
