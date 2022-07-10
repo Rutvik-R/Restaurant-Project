@@ -9,13 +9,24 @@ body{
 fieldset{
     background-image: url("images.webp") ;
     color:cyan;
+    border-radius: 40px;
+    margin-top: 20%;
+    margin-block-end: 20%;
 }
 
 td{
     width: 25%;
     align-items: auto;
+    
 }
 
 input , iframe{
     border: 2px solid brown;
+    border-radius: 5px;
+}
+
+fieldset:hover{
+    border-radius: 20px;
+    background-image: url("bg.webp");
+    color :rgb(255, 0, 149);
 }
