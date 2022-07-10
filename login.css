@@ -1,5 +1,5 @@
 body{
-    background-image: url("istockphoto-694189032-170667a\ \(1\).webp");
+    background-image: url("image/istockphoto-694189032-170667a\ \(1\).webp");
     image-resolution: 100%;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -7,7 +7,7 @@ body{
 }
 
 fieldset{
-    background-image: url("images.webp") ;
+    background-image: url("image/images.webp") ;
     color:cyan;
     border-radius: 40px;
     margin-top: 20%;
@@ -27,6 +27,6 @@ input , iframe{
 
 fieldset:hover{
     border-radius: 20px;
-    background-image: url("bg.webp");
+    background-image: url("image/bg.webp");
     color :rgb(255, 0, 149);
 }
