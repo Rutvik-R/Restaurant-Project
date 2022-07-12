@@ -7,6 +7,7 @@ body{
 
 .main{
     width: 100%;
+    padding: 2px;
 }
 
 .left{
@@ -18,13 +19,16 @@ body{
 .right{
     width: 40%;
     float: right;
+    
 }
 
 video{
     margin-top: 2%;
     width : 80% ;
     height: 200px;
+    border : 2px solid black;
     border-radius: 200% ;
+    background-color: rgb(39, 68, 59);
 }
 
 table , td , th {
@@ -41,14 +45,15 @@ p{
 h3{
     font-size: 90%;
     margin-left: 10%;
-    color:gold;
+    color:rgba(143, 212, 31, 0.671);
     /* color: fuchsia; */
 }
 
 .nearMe:hover{
     font-size: 150%;
-    background-image: url("image/bg3.jpg");   
+    background-image: url("image/bg3.jpg"); 
     background-repeat: no-repeat;
+    border-radius: 20px;
     background-size: 100%;
 }
 
