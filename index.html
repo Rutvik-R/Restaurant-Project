@@ -4,59 +4,122 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="css1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant</title>
-    
+    <link rel="stylesheet" href="login.css">
+    <title>Login Page</title>
 </head>
 
 <body>
-    <div class="head">
-        <p>Restaurant Menu</p>
+    <div class="login">
+        <fieldset>
+            <legend>
+                Login For Better Experience
+            </legend>
+            <form name="form1" onsubmit="return validateForm()">
+                <table>
+                    <tr>
+                        <td><label>Name :</label></td>
+                        <td><input type="text" name="name"> </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <lable>Email id :</lable>
+                        </td>
+                        <td><input type="text" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <lable>Mobile no: </lable>
+                        </td>
+                        <td><input type="text" name="Mno"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <lable>Gender :</lable>
+                        </td>
+                        <td>Male
+                            <input type="radio" value="Mail" name="Gender">
+                        </td>
+                        <td>Female
+                            <input type="radio" value="Mail" name="Gender">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="submit"></td>
+                    </tr>
+                </table>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <legend>For Regular Customer</legend>
+            <form name="form2" onsubmit="return validateForm2()">
+                <table>
+                    <tr>
+                        <td>Customer Id : </td>
+                        <td><input type="text" name="Customer Id"></td>
+                    </tr>
+                    <tr>
+                        <td>Password : </td>
+                        <td><input type="password" name="Password"></td>
+                    </tr>
+                    <td>Last Visit :</td>
+                    <td><input type="date"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="submit"></td>
+                    </tr>
+                </table>
+            </form>
+        </fieldset>
     </div>
-    <div class="body">
-        <div class="selector">
-            <table>
-                <tr>
-                    <td class="div1">Gujarati</td>
-                    <td class="div1">punjabi</td>
-                    <td class="div1">Rajasthani</td>
-                    <td class="div1">South Indian</td>
-                    
-                </tr>
-                <tr>
-                    <td><abbr title="Chhole-Bhature"><img src="image/chole-bature.jpg" alt="Chhole-Bhature image"></abbr></td>
-                    <td><abbr title="Thepla"><img src="image/Thepla.jpg" alt="Thepla image"></abbr></td>
-                    <td><abbr title="Ker sangri"><img src="image/Ker sangri.jpg" alt="Ker sangri image"></abbr></td>
-                    <td><abbr title="Masala Dosa"><img src="image/Masala Dosa.jpg" alt="Masala Dosa image"></abbr></td>
-                </tr>
-                <tr>
-                    <td><abbr title="Basundi"><img src="image/Basundi.jpg" alt="Basundi image"></abbr></td>
-                    <td><abbr title="​Amritsari Kulcha"><img src="image/Amritsari Kulcha.webp" alt="​Amritsari Kulcha image"></abbr></td>
-                    <td><abbr title="Papad ki subzi"><img src="image/Papad ki subzi.jpg" alt="Papad ki subzi image"></abbr></td>
-                    <td><abbr title="Meen Murringakka Curry"><img src="image/Meen Murringakka Curry.webp" alt="Meen Murringakka Curry image"></abbr></td>
-                </tr>
-                <tr>
-                    <td><abbr title="Gujarati Thali"><img src="image/Gujarati Thali.jpg" alt="Gujarati Thali image"></abbr></td>
-                    <td><abbr title="Gobhi-Shalgam-Gajar Pickle"><img src="image/Gobhi-Shalgam-Gajar Pickle.jpg" alt="Gobhi-Shalgam-Gajar Pickle image"></abbr></td>
-                    <td><abbr title="Bajra ki roti with lasun chutney"><img src="image/Bajra ki roti with lasun chutney.jpg" alt="Bajra ki roti with lasun chutney image"></abbr></td>
-                    <td><abbr title="Andhra lamb curry"><img src="image/Andhra lamb curry.jpg" alt="Andhra lamb curry image"></abbr></td>
-                </tr>
-                <tr>
-                    <td><abbr title="Undhiyu"><img src="image/Undhiyu.jpg" alt="Undhiyu image"></abbr></td>
-                    <td><abbr title="​Lassi"><img src="image/Lassi.webp" alt="​Lassi image"></abbr></td>
-                    <td><abbr title="Onion kachori"><img src="image/Onion kachori.jpg" alt="Onion kachori image"></abbr></td>
-                    <td><abbr title="Paal Payasam"><img src="image/Paal Payasam.jpg" alt="Paal Payasam image"></abbr></td>
-                </tr>
-                <!-- <tr>
-                    <td><button id="17">Handvo</button></td>
-                    <td><button id="18">​Amritsari Kulcha</button></td>
-                    <td><button id="19">Raab</button></td>
-                    <td><button id="20"></button></td>
-                </tr> -->
-            </table>
-        </div>
-    </div>
-    <center><button onclick=" window.open('about.html','_blank')">Next</button></center>
-</body> 
+
+    <script>
+        function validateForm() {
+            let x = document.forms["form1"]["name"].value;
+            let y = document.forms["form1"]["email"].value;
+            let z = document.forms["form1"]["Mno"].value;
+            let mailregex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            let phoneno = /^\d{10}$/;
+            if (x == "") {
+                alert("Please fill the name: ");
+                return false;
+            } else if (y == "") {
+                alert("Please fill the email: ");
+                return false;
+            } else if (/[^a-zA-Z]+ [a-zA-Z]*/.test(x)) {
+                alert("The name must only contain alphabets: ");
+                return false;
+            } else if (!y.match(mailregex)) {
+                alert("Please enter valid email address: ");
+                return false;
+            } else if (!z.match(phoneno)) {
+                alert("Please enter valid Mobile No: ");
+                return false;
+            } else {
+                alert("Your form has been submitted successfully: ");
+                window.open("p2.html", "_blank");
+                return true;
+            }
+        }
+        function validateForm2() {
+            let x = document.forms["form2"]["Customer Id"].value;
+            let y = document.forms["form2"]["Password"].value;
+            let mailregex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (x == "") {
+                alert("Please fill the Customer Id: ");
+                return false;
+            } else if (y == "") {
+                alert("Please fill the Password: ");
+                return false;
+            } else {
+                alert("Your form has been submitted successfully: ");
+                window.open("p2.html", "_blank");
+                return true;
+            }
+        }
+    </script>
+
+</body>
+
 </html>
